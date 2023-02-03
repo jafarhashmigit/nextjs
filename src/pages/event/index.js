@@ -3,6 +3,7 @@ import EventsSearch from "@/components/events/events-search";
 import { getAllEvents } from "@/helpers/api-util";
 import { useRouter } from "next/router";
 import Head from 'next/head';
+import NewsletterRegistration from "@/components/input/newsletter-registration";
 // import { getAllEvents } from "../dummy-data";
 
 function AllEventPages(props) {
@@ -25,6 +26,7 @@ function AllEventPages(props) {
       </Head>
             <div>
                 <EventsSearch onSearch={onSearch}/>
+                <NewsletterRegistration/>
                 <EventList items={events} />
             </div>
         </>

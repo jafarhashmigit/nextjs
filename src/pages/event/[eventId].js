@@ -2,6 +2,7 @@ import ErrorAlert from "@/components/error/error-alert";
 import EventContent from "@/components/event-detail/event-content";
 import EventLogistics from "@/components/event-detail/event-logistics";
 import EventSummary from "@/components/event-detail/event-summary";
+import Comments from "@/components/input/comments";
 import { getEventById, getFeaturedEvents } from "@/helpers/api-util";
 import { useRouter } from "next/router";
 // import { getEventById } from "../dummy-data";
@@ -32,6 +33,8 @@ function EventDetailPage(props) {
         <EventContent>
             <p>{event.description}</p>
         </EventContent>
+        <Comments eventId={event.id} />
+        
         </>
      );
 }
